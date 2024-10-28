@@ -1,0 +1,167 @@
+/* Estilo geral para telas maiores */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+
+.favicon {
+    color: #6A0D91;
+}
+
+body.bg_socials {
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body.bg_socials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    left: -9cm;
+    padding: 15px; /* Adicionado padding */
+    text-align: center; /* Centraliza o texto dentro do container */
+    background: rgba(255, 255, 255, 0.334); /* Caixa translúcida atrás dos avatares e textos */
+    border-radius: 15px; /* Adiciona bordas arredondadas à caixa translúcida */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.014); /* Adiciona uma sombra suave para destacar a caixa */
+}
+
+h1, h2, h4 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 20px;
+    margin: 3px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    padding: 20px;
+    margin: -25px;
+}
+
+.phone a {
+    color: white; /* Inherit the color from the parent element */
+    text-decoration: none; /* Remove the underline */
+    text-align: justify;
+}
+
+.phone a:hover {
+    color: whitesmoke; /* Ensure the color doesn't change on hover */
+    text-decoration: none; /* Ensure no underline appears on hover */
+    text-align: justify;
+}
+
+.wrapper {
+    list-style: none;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilo específico para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .container {
+        left: 0;
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .wrapper {
+        flex-direction: row; /* Mantém os itens lado a lado */
+        gap: 10px; /* Ajusta o espaço entre os itens */
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .wrapper {
+        flex-direction: row; /* Mantém os itens lado a lado em telas maiores */
+    }
+}
+
+.icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.icon .tooltip {
+    position: absolute;
+    top: -35px;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+    white-space: nowrap;
+}
+
+.icon:hover .tooltip {
+    display: block;
+}
+
+.icon .fab {
+    font-size: 24px;
+}
+
+.icon.facebook {
+    color: #3b5998;
+}
+
+.icon.x {
+    color: #1da1f2;
+}
+
+.icon.instagram {
+    color: #e1306c;
+}

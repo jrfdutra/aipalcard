@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <link rel="icon" href="path/to/your/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Cartão de Visitas</title>
+    <style>
+        /* Estilo para o contêiner principal */
+        .container {
+            display: flex;
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            padding: 15px; /* Adiciona espaçamento reduzido */
+            margin-left: auto; /* Move o contêiner para a direita */
+            margin-right: 20px; /* Espaçamento à direita */
+            max-width: 250px; /* Define a largura máxima do contêiner */
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            text-align: center; /* Centraliza o texto do cabeçalho */
+            margin-bottom: 2px; /* Espaçamento reduzido abaixo do cabeçalho */
+        }
+
+        /* Estilo para os avatares */
+        .avatars {
+            display: flex;
+            justify-content: center; /* Centraliza os avatares */
+            gap: 5px; /* Reduz o espaço entre os avatares */
+            margin-bottom: 2px; /* Reduz o espaço abaixo dos avatares */
+            padding: 18px;
+        }
+
+        .avatars img {
+            width: 60px; /* Tamanho do avatar */
+            height: 60px; /* Tamanho do avatar */
+            border-radius: 50%; /* Bordas arredondadas */
+            object-fit: cover;
+            border: 2px solid #8B4513; /* Borda marrom */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombreamento da borda */
+        }
+
+        .avatars span {
+            display: block;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            margin-top: 5px;
+            text-shadow: 1px 1px 0 #8B4513, 0 0 5px #8B4513; /* Sombreamento marrom */
+        }
+
+        .avatars a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: inherit; /* Mantém a cor original do texto */
+        }
+
+        /* Estilo para o fundo do corpo */
+        body {
+            background-image: url('img/home/background.jpg'); /* Altere para o caminho da sua imagem de fundo */
+            background-size: cover; /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+
+        }
+
+        /* Estilo para a navegação */
+        nav {
+            margin-bottom: 2px; /* Reduz o espaço abaixo da navegação */
+            text-align: center; /* Centraliza os ícones da navegação */
+        }
+
+        /* Estilo para os ícones das redes sociais */
+        .icon a {
+            color: #8B4513; /* Cor marrom */
+            font-size: 20px; /* Ajusta o tamanho do ícone */
+            margin: 0 3px; /* Adiciona espaço entre os ícones, reduzido */
+        }
+
+        /* Estilo para a imagem de boas-vindas */
+        .welcome-image {
+            width: 180px; /* Tamanho proporcional ao tamanho de um avatar */
+            height: auto; /* Mantém a proporção da imagem */
+            max-width: 100%; /* Garante que a imagem não exceda o contêiner */
+            padding: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/logotipo.png" alt="Imagem de Boas-Vindas" class="welcome-image"> <!-- Altere o caminho da imagem -->
+            <h2>Conheça as nossas lojas!</h2>
+        </header>
+
+        <div class="avatars">
+            <div>
+                <a href="https://www.exemplo.com/loja1" target="_blank" aria-label="Loja 1">
+                    <img src="img/lojas/19.jpg" alt="Imagem da Loja 1"> <!-- Altere o caminho da imagem -->
+                    <span>Loja 8</span>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.exemplo.com/loja2" target="_blank" aria-label="Loja 2">
+                    <img src="img/lojas/23.jpg" alt="Imagem da Loja 2"> <!-- Altere o caminho da imagem -->
+                    <span>Loja 23</span>
+                </a>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <a href="https://www.facebook.com/p/Aipal-Padarias-e-confeitarias-desde-1964-100077441702033/?locale=pt_PT" target="_blank" aria-label="Facebook">
+                        <span class="tooltip">Facebook</span>
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="icon instagram">
+                    <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faipal_espinho%2F&is_from_rle" target="_blank" aria-label="Instagram">
+                        <span class="tooltip">Instagram</span>
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
